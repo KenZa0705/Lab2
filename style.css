@@ -1,0 +1,106 @@
+/* Global Styles */
+html, body {
+    height: 100%; /* Ensure body takes up full height */
+    margin: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+#game-header {
+    background-color: #007bff; /* Bootstrap Primary */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Navigation Styles */
+.navbar-nav .nav-link {
+    margin-right: 15px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+/* Game Container */
+#game-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    height: 80vh;
+    flex: 1; /* Takes up the remaining space above the footer */
+}
+
+/* Answer Form */
+#answer-form {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Game Controls */
+.team-controls {
+    display: flex;
+    justify-content: center;
+}
+
+/* Button Styles */
+button {
+    border-radius: 5px;
+}
+
+#start-game, #submit-answer {
+    transition: background-color 0.3s ease;
+}
+
+#start-game:hover, #submit-answer:hover {
+    background-color: #0056b3; /* Darker blue */
+}
+
+/* Score Table */
+.score-table {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Countdown Timer */
+#countdown-timer {
+    font-size: 2rem;
+    color: red;
+}
+
+/* Results Section */
+#results {
+    background-color: #6c757d;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+footer {
+    display: block;
+    position: fixed;
+    background-color: #f8f9fa; /* Add background for clarity */
+    text-align: center;
+    padding: 10px 0;
+    bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #game-container {
+        height: auto;
+    }
+
+    #answer-form {
+        flex-direction: column;
+    }
+
+    .team-controls {
+        flex-direction: column;
+    }
+}

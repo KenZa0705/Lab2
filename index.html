@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Feud Game</title>
+    <!-- Link to Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Link to Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="game-header" class="bg-primary text-white text-center py-3">
+        <h1>Family Feud Game</h1>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#rules">Rules</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#leaderboard">Leaderboard</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Game Container -->
+    <div id="game-container" class="container bg-light p-5 my-4">
+        <section id="game-introduction" class="mb-4">
+            <p>Welcome to Family Feud! Teams compete to guess the most popular answers to survey questions. Points are awarded based on the popularity of the responses.</p>
+        </section>
+
+        <!-- Game Setup -->
+        <h2 class="text-center mb-4">Game Setup</h2>
+
+        <!-- Player Name Inputs -->
+        <form id="player-names-form" class="mb-4">
+            <div class="mb-3">
+                <label for="team1-player">Team 1 Player 1:</label>
+                <input type="text" id="team1-player1" class="form-control" name="team1-player1">
+            </div>
+            <div class="mb-3">
+                <label for="team1-player">Team 1 Player 2:</label>
+                <input type="text" id="team1-player2" class="form-control" name="team1-player2">
+            </div>
+            <div class="mb-3">
+                <label for="team1-player">Team 1 Player 3:</label>
+                <input type="text" id="team1-player3" class="form-control" name="team1-player3">
+            </div>
+            <div class="mb-3">
+                <label for="team2-player">Team 2 Player 1:</label>
+                <input type="text" id="team2-player1" class="form-control" name="team2-player1">
+            </div>
+            <div class="mb-3">
+                <label for="team2-player">Team 2 Player 2:</label>
+                <input type="text" id="team2-player2" class="form-control" name="team2-player2">
+            </div>
+            <div class="mb-3">
+                <label for="team2-player">Team 2 Player 3:</label>
+                <input type="text" id="team2-player3" class="form-control" name="team2-player3">
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- Game Start Button -->
+        <button id="start-game" class="btn btn-primary w-100 mb-4">
+            <!-- Family Feud Buzzer Image -->
+            <img src="assets/buzzer.png" class="d-block mx-auto" alt="Family Feud Buzzer" width="100" height="100">
+            <p>Start Game</p>
+        </button>
+
+        <!-- Answer Placeholders -->
+        <ul class="list-group mb-4">
+            <li class="list-group-item">Answer 1</li>
+            <li class="list-group-item">Answer 2</li>
+            <li class="list-group-item">Answer 3</li>
+            <li class="list-group-item">Answer 4</li>
+        </ul>
+
+        <!-- Answer Form -->
+        <form id="answer-form" class="d-flex mb-4" method="POST">
+            <label>Question:</label>
+            <input type="text" id="user-answer" name="answer" class="form-control me-2" placeholder="Your Answer">
+            <button id="submit-answer" class="btn btn-primary" type="submit">Submit</button>
+        </form>
+
+        
+
+        <!-- Team Controls -->
+        <div class="team-controls d-flex justify-content-center mb-4">
+            <button class="btn btn-secondary me-3">Pass</button>
+            <button class="btn btn-secondary">Play</button>
+        </div>
+
+        
+
+        <!-- Results Section -->
+        <div id="results" class="bg-secondary text-white p-3 mb-4">
+            <!-- Results will be displayed here -->
+            <!-- Team Score Table -->
+            <table class="table table-striped text-center table-bordered score-table mb-4">
+                <thead>
+                    <tr>
+                        <th>Team 1</th>
+                        <th>Team 2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Countdown Timer -->
+        <div id="countdown-timer" class="text-center" style="display:none; font-size: 2rem; color: red;">
+            <!-- Progress Bar -->
+            <progress value="0" max="100" class="w-100 mb-4"></progress>
+        </div>
+        
+        <!-- Audio Tag for Background Music -->
+        <audio controls class="d-block mx-auto mt-4">
+            <source src="background-music.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <h3>Game Over!</h3>
+    </footer>
+
+    <!-- Link to Bootstrap JS (optional if needed) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
